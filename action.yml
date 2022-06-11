@@ -1,0 +1,34 @@
+name: "Universal APK Builder Update"
+description: "Build Universal APK file from AAB file"
+author: "Lukáš Sztefek (@skywall)"
+inputs:
+    aab_path:
+        description: "Path to input *.aab file"
+        required: true
+    output_dir:
+        description: "Path to directory where outputs are stored"
+        required: false
+        default: "output"
+    keystore_path:
+        description: "Path to keystore file (*.jks)"
+        required: true
+    keystore_password: 
+        description: "Keystore password"
+        required: true
+    keystore_alias:
+        description: "Keystore alias"
+        required: true
+    keystore_alias_password: 
+        description: "Keystore alias password"
+        required: true
+outputs:
+    universal_apk_path:
+        description: "Final universal *.apk file path"
+
+branding:
+    icon: "package"
+    color: "green"
+
+runs:
+    using: "docker"
+    image: "Dockerfile"
