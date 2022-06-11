@@ -1,8 +1,7 @@
 # Universal APK Builder Action
-![Action Build](https://github.com/skywall/universal-apk-builder/workflows/Action%20Build/badge.svg?branch=master)
+[![Action Build - CI](https://github.com/yoshuaandrean/universal-apk/actions/workflows/build_ci.yml/badge.svg)](https://github.com/yoshuaandrean/universal-apk/actions/workflows/build_ci.yml)
 
-This action converts given `*.aab` file to universal `*.apk` file. This file includes all 
-dynamic modules.
+This action is copy version of https://github.com/marketplace/actions/universal-apk-builder with a newer version of bundletool. 
 
 ## Inputs
 
@@ -42,7 +41,7 @@ Path to final universal APK
 
 ```
 - name: Build Universal APK
-  uses: skywall/universal-apk-builder@v1.0.1
+  uses: yoshuaandrean/universal-apk-builder-update@v1.5
   with:
     aab_path: "/path/to/file.aab"
     keystore_path: "/path/to/keystore.jks"
